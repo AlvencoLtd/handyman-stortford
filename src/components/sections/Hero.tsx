@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const heroImage =
@@ -67,14 +66,14 @@ export function Hero() {
             >
               Get a Free Quote
             </a>
-            <Link
+            <a
               href="https://wa.me/393209708536"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/70 bg-white/5 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
             >
               WhatsApp Us Now
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>
