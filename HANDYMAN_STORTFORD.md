@@ -22,10 +22,11 @@
 
 | Campo | Valore |
 |---|---|
-| Tipo | Sito vetrina Next.js 15 |
-| Stack | Next.js 15, TypeScript, Tailwind CSS 4, Framer Motion |
-| Repo | da creare in https://github.com/orgs/AlvencoLtd/repositories |
-| Deploy demo | handyman-stortford.vercel.app |
+| Tipo | Sito vetrina Next.js 16 |
+| Stack | Next.js 16, TypeScript, Tailwind CSS 4, Framer Motion |
+| Remote origin | https://github.com/alessandro2506/handyman-stortford (account personale, collegato a Vercel) |
+| Remote alvenco | https://github.com/AlvencoLtd/handyman-stortford (org, archivio sincronizzato) |
+| Deploy demo | https://handyman-stortford.vercel.app |
 | Dominio finale | da acquistare (incluso nel preventivo) — candidato: handymanstortford.co.uk |
 | Benchmark design | alvenco-demo.vercel.app |
 
@@ -81,15 +82,56 @@
 
 ---
 
+## GIT & DEPLOY
+
+### Struttura remote
+- **`origin`**: `github.com/alessandro2506/handyman-stortford` — repo personale, collegata a Vercel (Hobby plan compatibile)
+- **`alvenco`**: `github.com/AlvencoLtd/handyman-stortford` — org, archivio sincronizzato manualmente
+- **Push standard**: `git push origin main && git push alvenco main`
+
+### STEP 1 — Repo personale (Cursor)
+```bash
+# Prima crea repo su https://github.com/new
+# Account: alessandro2506 | Nome: handyman-stortford | Visibilità: public
+git init
+git add .
+git commit -m "feat: initial handyman site"
+git remote add origin https://github.com/alessandro2506/handyman-stortford.git
+git push -u origin main
+```
+
+### STEP 2 — Mirror org AlvencoLtd (Cursor)
+```bash
+# Prima crea repo su https://github.com/orgs/AlvencoLtd/repositories
+# Nome: handyman-stortford | Visibilità: public
+git remote add alvenco https://github.com/AlvencoLtd/handyman-stortford.git
+git push alvenco main
+```
+
+### STEP 3 — Vercel (Alex)
+- Vai su https://vercel.com/new
+- Importa `alessandro2506/handyman-stortford` (account personale — NON l'org)
+- Framework: Next.js — Root directory: vuota
+- Project name: `handyman-stortford`
+- Deploy e verifica 200 su https://handyman-stortford.vercel.app
+
+### STEP 4 — Aggiorna HANDYMAN_STORTFORD.md (Cursor)
+- **Completato (2026-05-16)**: URL Vercel documentato sopra; changelog aggiornato in fondo al file.
+
+> **Nessuna GitHub Action, nessun PAT, nessun Secret.** Pattern standard Alvenco: doppio remote manuale.
+
+---
+
 ## STATO AVANZAMENTO
 
 - [x] Brief analizzato
 - [x] File .md creato
 - [x] CLAUDE.md aggiornato
-- [ ] Prompt Cursor generato
-- [ ] Repo GitHub creato
-- [ ] Sviluppo Next.js avviato
-- [ ] Deploy Vercel
+- [x] Prompt Cursor generato
+- [x] Repo personale `alessandro2506/handyman-stortford` creata e pushata (`origin`)
+- [x] Repo org `AlvencoLtd/handyman-stortford` disponibile come mirror (`alvenco`)
+- [x] Sviluppo Next.js avviato
+- [ ] Deploy Vercel (collegato a repo personale)
 - [ ] Revisione con cliente
 - [ ] Contratto e preventivo
 
@@ -115,4 +157,6 @@
 
 | Data | Modifica |
 |---|---|
-| Maggio 2026 | File creato — progetto avviato, brief analizzato, prompt Cursor da generare |
+| Maggio 2026 | File creato — progetto avviato, brief analizzato |
+| Maggio 2026 | Sezione GIT & DEPLOY corretta: doppio remote manuale (origin + alvenco), nessuna GitHub Action — pattern standard Alvenco da TUZZOLINO |
+| 16 Maggio 2026 | Deploy docs: URL Vercel esplicitato (`https://handyman-stortford.vercel.app`); STEP 1–2 eseguiti — `origin` → repo personale `alessandro2506/handyman-stortford`, `alvenco` → mirror `AlvencoLtd/handyman-stortford`; push workflow documentato |
