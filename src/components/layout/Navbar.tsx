@@ -41,7 +41,7 @@ export function Navbar() {
           : "border-transparent bg-white/70 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center px-4 py-2.5 lg:py-2">
+      <div className="mx-auto flex max-w-6xl items-center px-4 py-2.5 lg:py-2.5">
         <Link
           href="/"
           className="group shrink-0 transition-opacity hover:opacity-90"
@@ -51,7 +51,7 @@ export function Navbar() {
             alt="QuickFix Property Maintenance"
             width={612}
             height={612}
-            className="h-[6.5rem] w-auto object-contain object-left sm:h-[7rem] lg:h-[8.75rem]"
+            className="h-[7.25rem] w-auto object-contain object-left sm:h-[8rem] lg:h-[10rem]"
             priority
           />
         </Link>

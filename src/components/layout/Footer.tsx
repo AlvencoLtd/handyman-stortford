@@ -18,7 +18,7 @@ export function Footer() {
             alt="QuickFix Property Maintenance"
             width={612}
             height={612}
-            className="h-12 w-auto object-contain"
+            className="h-40 w-auto max-w-full object-contain object-left sm:h-44 md:h-48"
           />
           <p className="mt-3 max-w-md text-sm leading-relaxed text-[color:var(--text-secondary)]">
             Professional handyman services in Bishop&apos;s Stortford and
