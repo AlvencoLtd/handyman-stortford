@@ -35,37 +35,40 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
+      className={`sticky top-0 z-50 overflow-visible border-b transition-colors duration-300 ${
         scrolled
           ? "border-[color:var(--border)] bg-white/85 backdrop-blur-md shadow-sm"
           : "border-transparent bg-white/70 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:py-5">
-        <Link href="/" className="group shrink-0">
+      <div className="mx-auto flex max-w-6xl items-center px-4 py-2.5 lg:py-2">
+        <Link
+          href="/"
+          className="group shrink-0 transition-opacity hover:opacity-90"
+        >
           <Image
             src="/images/site/quickfix-house-tools-mark.svg"
             alt="QuickFix Property Maintenance"
             width={612}
             height={612}
-            className="h-[4.75rem] w-auto object-contain sm:h-[5.25rem]"
+            className="h-[6.5rem] w-auto object-contain object-left sm:h-[7rem] lg:h-[8.75rem]"
             priority
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="ml-1 hidden items-center gap-4 text-sm lg:gap-5 xl:gap-5 lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-[color:var(--text-primary)] transition hover:text-[color:var(--primary)]"
+              className="shrink-0 font-medium whitespace-nowrap text-[color:var(--text-primary)] transition hover:text-[color:var(--primary)]"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="ml-auto hidden shrink-0 lg:block">
           <Link
             href="/#contact"
             className="inline-flex items-center justify-center rounded-full bg-[color:var(--accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--text-primary)] shadow-sm transition hover:bg-[color:var(--accent-dark)]"
@@ -76,7 +79,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] text-[color:var(--primary)] lg:hidden"
+          className="ml-auto inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[color:var(--border)] text-[color:var(--primary)] lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
