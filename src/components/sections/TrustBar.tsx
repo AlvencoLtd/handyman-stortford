@@ -61,14 +61,14 @@ export function TrustBar() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mt-1 flex w-full justify-center md:mt-2"
+          className="relative -mt-10 flex w-full justify-center md:-mt-12 lg:-mt-14"
         >
           <Image
             src="/images/site/trustbar-tools-strip.svg"
             alt=""
             width={612}
             height={306}
-            className="mx-auto h-auto w-full max-w-6xl object-contain object-bottom max-h-[9rem] [clip-path:inset(42%_0_0_0)] sm:max-h-[11rem] md:max-h-[13rem] lg:max-h-[15rem] xl:max-h-[17rem]"
+            className="mx-auto h-auto w-full max-w-6xl object-contain object-bottom max-h-[9rem] [clip-path:inset(52%_0_0_0)] sm:max-h-[11rem] md:max-h-[13rem] lg:max-h-[15rem] xl:max-h-[17rem]"
             sizes="(max-width: 1280px) 100vw, 1152px"
             aria-hidden
           />
