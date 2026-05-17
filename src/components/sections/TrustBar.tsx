@@ -61,15 +61,15 @@ export function TrustBar() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mt-10 flex min-h-[5.75rem] w-full justify-center sm:min-h-[6.5rem] md:mt-12 md:min-h-[7rem]"
+          className="relative mt-5 flex w-full justify-center md:mt-7"
         >
           <Image
             src="/images/site/trustbar-tools-strip.svg"
             alt=""
             width={612}
             height={306}
-            className="mx-auto h-auto max-h-[5.75rem] w-full max-w-4xl object-contain object-center sm:max-h-[6.5rem] md:max-h-[8.5rem] lg:max-h-40 xl:max-h-[11rem]"
-            sizes="(max-width: 1024px) 100vw, 896px"
+            className="mx-auto h-auto w-full max-w-6xl object-contain object-center max-h-[7.75rem] sm:max-h-[9.25rem] md:max-h-[11.5rem] lg:max-h-[13.5rem] xl:max-h-[15.75rem]"
+            sizes="(max-width: 1280px) 100vw, 1152px"
             aria-hidden
           />
         </motion.div>
