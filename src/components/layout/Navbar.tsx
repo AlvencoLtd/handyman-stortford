@@ -44,7 +44,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:py-5">
         <Link href="/" className="group shrink-0">
           <Image
-            src="/images/site/quickfix-house-tools-mark.png"
+            src="/images/site/quickfix-house-tools-mark.svg"
             alt="QuickFix Property Maintenance"
             width={612}
             height={612}

@@ -14,7 +14,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Image
-            src="/images/site/quickfix-house-tools-mark.png"
+            src="/images/site/quickfix-house-tools-mark.svg"
             alt="QuickFix Property Maintenance"
             width={612}
             height={612}
