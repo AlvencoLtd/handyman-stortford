@@ -14,10 +14,10 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Image
-            src="/logo-quickfix.svg"
+            src="/images/site/quickfix-house-tools-mark.png"
             alt="QuickFix Property Maintenance"
-            width={160}
-            height={60}
+            width={612}
+            height={612}
             className="h-12 w-auto object-contain"
           />
           <p className="mt-3 max-w-md text-sm leading-relaxed text-[color:var(--text-secondary)]">

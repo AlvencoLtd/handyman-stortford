@@ -44,10 +44,10 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:py-5">
         <Link href="/" className="group shrink-0">
           <Image
-            src="/logo-quickfix.svg"
+            src="/images/site/quickfix-house-tools-mark.png"
             alt="QuickFix Property Maintenance"
-            width={240}
-            height={92}
+            width={612}
+            height={612}
             className="h-[4.75rem] w-auto object-contain sm:h-[5.25rem]"
             priority
           />
