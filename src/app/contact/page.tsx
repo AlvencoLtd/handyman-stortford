@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactFormClient } from "@/components/sections/ContactFormClient";
-import { SITE_META_DESCRIPTION } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Contact",
-    description: SITE_META_DESCRIPTION,
-    alternates: {
-      canonical: "/contact",
+    description:
+      "Get a free quote from QuickFix Property Maintenance. Call 07746 187685 or WhatsApp — handyman services in Bishop's Stortford.",
+    alternates: { canonical: "/contact" },
+    openGraph: {
+      title: "Contact | QuickFix Property Maintenance",
+      description:
+        "Call or WhatsApp QuickFix on 07746 187685 for a free handyman quote in Bishop's Stortford.",
+      url: "/contact",
+      type: "website",
     },
   };
 }

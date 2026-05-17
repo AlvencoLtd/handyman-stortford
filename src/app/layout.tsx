@@ -24,7 +24,9 @@ const localBusinessJsonLd = {
   "@type": "LocalBusiness",
   name: "QuickFix Property Maintenance",
   description: SITE_META_DESCRIPTION,
+  url: SITE_URL,
   telephone: "07746 187685",
+  sameAs: ["https://www.facebook.com/profile.php?id=61587750327501"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bishop's Stortford",
@@ -34,10 +36,31 @@ const localBusinessJsonLd = {
   areaServed: [
     "Bishop's Stortford",
     "Sawbridgeworth",
+    "High Wych",
     "Harlow",
     "Stansted Mountfitchet",
     "Hertford",
+    "Ware",
+    "Great Dunmow",
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Handyman Services",
+    itemListElement: [
+      "Small Repairs",
+      "Furniture Assembly",
+      "Wall Fixing & Shelving",
+      "Painting & Decorating",
+      "Plumbing",
+      "Electrical",
+      "Garden Maintenance",
+      "Laminated Flooring",
+      "Property Maintenance",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
 };
 
 export const metadata: Metadata = {
@@ -55,6 +78,19 @@ export const metadata: Metadata = {
     "plumbing handyman",
     "electrical small jobs",
   ],
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: SITE_URL,
+    siteName: "QuickFix Property Maintenance",
+    title: SITE_TITLE_DEFAULT,
+    description: SITE_META_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE_DEFAULT,
+    description: SITE_META_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { ALL_REVIEWS } from "@/lib/reviews";
-import { SITE_META_DESCRIPTION } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Reviews",
-    description: SITE_META_DESCRIPTION,
-    alternates: {
-      canonical: "/reviews",
+    description:
+      "5-star reviews for QuickFix Property Maintenance in Bishop's Stortford. Trusted by homeowners, landlords and families across Hertfordshire.",
+    alternates: { canonical: "/reviews" },
+    openGraph: {
+      title: "Reviews | QuickFix Property Maintenance",
+      description:
+        "See what our customers say about QuickFix handyman services in Bishop's Stortford.",
+      url: "/reviews",
+      type: "website",
     },
   };
 }

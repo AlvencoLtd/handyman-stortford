@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AreasCovered } from "@/components/sections/AreasCovered";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { FaqStrip } from "@/components/sections/FaqStrip";
 import { Hero } from "@/components/sections/Hero";
 import { ReviewsStrip } from "@/components/sections/ReviewsStrip";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <ServicesGrid />
       <AreasCovered />
       <ReviewsStrip />
+      <FaqStrip />
       <ContactForm />
     </>
   );

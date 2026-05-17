@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { GALLERY_ITEMS } from "@/lib/gallery";
-import { SITE_META_DESCRIPTION } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Gallery",
-    description: SITE_META_DESCRIPTION,
-    alternates: {
-      canonical: "/gallery",
+    description:
+      "Browse completed handyman jobs by QuickFix Property Maintenance — shelving, painting, repairs and more across Bishop's Stortford.",
+    alternates: { canonical: "/gallery" },
+    openGraph: {
+      title: "Gallery | QuickFix Property Maintenance",
+      description:
+        "Photos of completed handyman jobs in Bishop's Stortford and surrounding areas.",
+      url: "/gallery",
+      type: "website",
     },
   };
 }

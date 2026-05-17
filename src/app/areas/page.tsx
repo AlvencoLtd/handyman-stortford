@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { SITE_META_DESCRIPTION } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Areas Covered",
-    description: SITE_META_DESCRIPTION,
-    alternates: {
-      canonical: "/areas",
+    description:
+      "QuickFix Property Maintenance covers Bishop's Stortford, Sawbridgeworth, Harlow, Stansted Mountfitchet, Hertford, Ware and Great Dunmow. Fast local handyman service.",
+    alternates: { canonical: "/areas" },
+    openGraph: {
+      title: "Areas Covered | QuickFix Property Maintenance",
+      description:
+        "Local handyman serving Bishop's Stortford and a 5km radius including Sawbridgeworth, Harlow and Hertford.",
+      url: "/areas",
+      type: "website",
     },
   };
 }

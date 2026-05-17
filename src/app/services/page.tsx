@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES } from "@/lib/services";
-import { SITE_META_DESCRIPTION } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Services",
-    description: SITE_META_DESCRIPTION,
-    alternates: {
-      canonical: "/services",
+    description:
+      "Handyman services in Bishop's Stortford: repairs, plumbing, electrical, painting, garden maintenance, laminated flooring and furniture assembly. Call 07746 187685.",
+    alternates: { canonical: "/services" },
+    openGraph: {
+      title: "Services | QuickFix Property Maintenance",
+      description:
+        "Professional handyman services across Bishop's Stortford and surrounding areas.",
+      url: "/services",
+      type: "website",
     },
   };
 }

@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SITE_META_DESCRIPTION } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "About",
-    description: SITE_META_DESCRIPTION,
-    alternates: {
-      canonical: "/about",
+    description:
+      "Meet the team behind QuickFix Property Maintenance — reliable, local and professional handyman services in Bishop's Stortford.",
+    alternates: { canonical: "/about" },
+    openGraph: {
+      title: "About | QuickFix Property Maintenance",
+      description:
+        "Local handyman based in Bishop's Stortford with years of experience in property maintenance.",
+      url: "/about",
+      type: "website",
     },
   };
 }
